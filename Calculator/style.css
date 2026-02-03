@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  background: linear-gradient(160deg,#e3f2fd,#bbdefb,#90caf9);
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  max-width: 420px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+/* display */
+#display {
+  height: 130px;
+  font-size: 46px;
+  text-align: right;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background:#1b263b;
+  color: white;
+  border: solid 2px #0d1b2a;
+} 
+ 
+
+
+
+/* grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 16px;
+  /* border: solid 1px white; */
+  background: #0d1b2a;
+  margin-bottom: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* normal buttons */
+button {
+  height: 75px;
+  font-size: 24px;
+  border: none;
+  border-radius: 60%;
+  background: #0d1b2a;
+  color: #e3f2fd;
+  transition: 0.15s;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+/* top buttons */
+.top {
+  background: #1b263b;
+}
+
+/* operator buttons */
+.operator {
+  background: #1b263b;
+}
+
+/* equal button */
+.equal {
+  background: #42a5f5;
+  color: black;
+}
