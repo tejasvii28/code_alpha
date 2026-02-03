@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg,#1d2671,#c33764);
+  font-family: Arial;
+  color: white;
+}
+
+.player {
+  width: 320px;
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.cover img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: spin 8s linear infinite;
+  animation-play-state: paused;
+}
+
+.playing img {
+  animation-play-state: running;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.controls button {
+  font-size: 26px;
+  margin: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+.controls button:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.volume-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.volume-box i {
+  font-size: 18px;
+}
