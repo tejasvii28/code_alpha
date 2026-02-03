@@ -1,0 +1,109 @@
+body {
+  text-align: center;
+}
+
+h1{
+  margin-top: 30px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery img{
+
+    height: auto;
+    width: 100%;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery img:hover{
+    box-shadow: 0px 8px 20px  rgb(88, 85, 85) ;
+    transform: scale(1.02);
+    
+
+}
+
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  width: auto;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  height: auto;
+}
+
+.close, .prev, .next {
+  position: absolute;
+  font-size: 32px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close {
+  top: 20px;
+  right: 30px;
+}
+
+.prev {
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.close:hover,
+.prev:hover,
+.next:hover,
+.delete:hover {
+  color: #ffcc00;
+}
+
+
+@media (max-width: 600px) {
+  .prev, .next {
+    font-size: 25px;
+  }
+
+  .close {
+    font-size: 30px;
+  }
+}
+
+.delete {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

@@ -1,1 +1,29 @@
-<p>hello world</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+<div class="heading">
+<h1>Gallery</h1>
+</div>
+
+<div class="gallery" id="gallery">
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" >
+  <button class="close" onclick="closeBox()"><i class="fa-solid fa-xmark"></i></button>
+  <button class="prev" onclick="prev()"><i class="fa-solid fa-chevron-left"></i></button>
+  <img id="bigImg">
+  <button class="next" onclick="next()"> <i class="fa-solid fa-chevron-right"></i></button>
+  <button class="delete" onclick="deleteImg()"><i class="fa-solid fa-trash"></i></button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
